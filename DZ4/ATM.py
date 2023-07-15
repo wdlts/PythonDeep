@@ -70,6 +70,7 @@ def print_balance(balance):
     print("Остаток на счете:", balance)
 
 def atm():
+    operationlist = []
     balance = 0
     operations_count = 0
 
