@@ -20,16 +20,26 @@ for x in inputstring:
     if x in marks:
         outputstring = inputstring.replace(x, "")
 
-resultdictlist = {}
+resultdictlist = []
 for i in [{outputstring.split(" ").count(i): i} for i in outputstring.split(" ")]:
-    resultdictlist.update(i)
+    resultdictlist.append(i)
+print(resultdictlist)
 
+tempdict = []
 
-print(sorted(resultdictlist.items(), key=lambda i: i[0])[len(resultdictlist)-10:len(resultdictlist)])
+for i in resultdictlist:
+    if i not in tempdict:
+        tempdict.append(i)
+print(tempdict)
 
+#Сгруппировал слова с одинаковым количеством повторов.
+result={key: set() for key in {key for element in tempdict for key in element}}
+for element in tempdict:
+    for key, value in element.items():
+        result[key].add(value)
+result = [{key: [*value]} for key, value in result.items()][len(result)-10:len(result)]
 
-
-
+print(result)
 
 
 
