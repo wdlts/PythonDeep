@@ -1,0 +1,6 @@
+parent_directory,isFile,name,size_bytes
+./tempdirectory,True,subfile1.txt,5
+./tempdirectory,False,subdirectory1,5
+./tempdirectory\subdirectory1,True,subfile2.txt,5
+./tempdirectory\subdirectory1,False,subdirecory2,0
+./tempdirectory\subdirectory1,False,subdirectory3,0
